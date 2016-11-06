@@ -9,15 +9,13 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var containerView: UIView!
     
-    let drawStaffWithPitch = "drawStaffWithPitch"
-    let initialPitch = "c/4"
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let wkWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: containerView.frame.width, height: containerView.frame.height))
-        
+        wkWebView.navigationDelegate = self
         wkWebView.allowsBackForwardNavigationGestures = false
         wkWebView.isUserInteractionEnabled = false
         
@@ -26,8 +24,12 @@ class ViewController: UIViewController {
             let request = URLRequest(url: url)
             wkWebView.load(request)
         }
-        
-        wkWebView.evaluateJavaScript("\(drawStaffWithPitch)(\(initialPitch))", completionHandler: nil)
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        let function = "drawStaffWithPitch"
+        let pitch = "c/4"
+        webView.evaluateJavaScript("\(function)(\"\(pitch)\")")
     }
 }
 

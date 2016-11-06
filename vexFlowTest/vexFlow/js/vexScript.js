@@ -19,5 +19,3 @@ function drawStaffWithPitch(pitch) {
     
     voice.draw(context, stave);
 }
-
-drawStaffWithPitch("c/4")
