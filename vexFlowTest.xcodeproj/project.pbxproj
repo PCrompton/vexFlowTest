@@ -14,6 +14,7 @@
 		968F56DD1DCD69C8007AD093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968F56DB1DCD69C8007AD093 /* LaunchScreen.storyboard */; };
 		968F56E81DCD69C8007AD093 /* vexFlowTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F56E71DCD69C8007AD093 /* vexFlowTestTests.swift */; };
 		968F56F31DCD69C8007AD093 /* vexFlowTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F56F21DCD69C8007AD093 /* vexFlowTestUITests.swift */; };
+		968F57011DCEACE3007AD093 /* vexFlow in Resources */ = {isa = PBXBuildFile; fileRef = 968F57001DCEACE3007AD093 /* vexFlow */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		968F56EE1DCD69C8007AD093 /* vexFlowTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vexFlowTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968F56F21DCD69C8007AD093 /* vexFlowTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vexFlowTestUITests.swift; sourceTree = "<group>"; };
 		968F56F41DCD69C8007AD093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968F57001DCEACE3007AD093 /* vexFlow */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vexFlow; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				968F56D91DCD69C8007AD093 /* Assets.xcassets */,
 				968F56DB1DCD69C8007AD093 /* LaunchScreen.storyboard */,
 				968F56DE1DCD69C8007AD093 /* Info.plist */,
+				968F57001DCEACE3007AD093 /* vexFlow */,
 			);
 			path = vexFlowTest;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				968F56DD1DCD69C8007AD093 /* LaunchScreen.storyboard in Resources */,
 				968F56DA1DCD69C8007AD093 /* Assets.xcassets in Resources */,
+				968F57011DCEACE3007AD093 /* vexFlow in Resources */,
 				968F56D81DCD69C8007AD093 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

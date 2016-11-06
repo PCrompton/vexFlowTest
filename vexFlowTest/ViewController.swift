@@ -7,19 +7,27 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var containerView: UIView!
+    
+    let drawStaffWithPitch = "drawStaffWithPitch"
+    let initialPitch = "c/4"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let wkWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: containerView.frame.width, height: containerView.frame.height))
+        
+        wkWebView.allowsBackForwardNavigationGestures = false
+        wkWebView.isUserInteractionEnabled = false
+        
+        containerView.addSubview(wkWebView)
+        if let url = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "vexFlow") {
+            let request = URLRequest(url: url)
+            wkWebView.load(request)
+        }
+        
+        wkWebView.evaluateJavaScript("\(drawStaffWithPitch)(\(initialPitch))", completionHandler: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
