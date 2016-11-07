@@ -28,7 +28,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         let function = "drawStaffWithPitch"
-        let pitch = "c/4"
+        let pitch = "C#4"
         webView.evaluateJavaScript("\(function)(\"\(pitch)\")")
     }
 }
