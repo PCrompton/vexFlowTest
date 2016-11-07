@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate {
+    
     @IBOutlet weak var containerView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -20,6 +21,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         wkWebView.isUserInteractionEnabled = false
         
         containerView.addSubview(wkWebView)
+        
         if let url = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "vexFlow") {
             let request = URLRequest(url: url)
             wkWebView.load(request)
@@ -28,7 +30,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         let function = "drawStaffWithPitch"
-        let pitch = "C#4"
+        let pitch = "E5"
         webView.evaluateJavaScript("\(function)(\"\(pitch)\")")
     }
 }

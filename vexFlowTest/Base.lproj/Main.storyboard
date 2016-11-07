@@ -26,7 +26,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Zki-AX-Xtg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8o9-Co-sMe"/>
                             <constraint firstItem="Zki-AX-Xtg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="MWd-Ly-Srj"/>
